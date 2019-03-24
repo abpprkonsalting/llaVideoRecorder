@@ -1,0 +1,208 @@
+﻿//
+// ui-select
+// --------------------------------------------------
+@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+
+
+.ui-select-container {
+    > .ui-select-match {
+
+        > .btn {
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 1.45;
+            //line-height: 1.75;
+            border-radius: 0;
+            transition: none;
+            font-weight: 400;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        > .btn-default {
+            background: @control-body;
+            color: @brand-primary;
+            border-radius: 0;
+            border-color: @control-body;
+            border: 1px solid @control-body;
+            box-shadow: none;
+        }
+
+        > .form-control:focus {
+            box-shadow: none;
+            border-color: @control-body;
+        }
+
+        &.btn-default-focus {
+            color: @brand-primary;
+            background-color: @control-body;
+            border-color: @control-body;
+            text-decoration: none;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+            box-shadow: none;
+        }
+    }
+}
+
+.ui-select-bootstrap {
+    > input {
+
+        &.ui-select-search {
+            &.form-control {
+                border-radius: 0; /* FIXME hardcoded value :-/ */
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                background-color: #e0dede;
+                border-color: #e0dede;
+                transition: none;
+                box-shadow: none;
+                height: 36px;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: #e0dede;
+                    
+                }
+            }
+        }
+    }
+
+    > .ui-select-choices {
+        border-radius: 0;
+       
+    }
+
+    .ui-select-choices-row.active > a {
+        color: #FFF;
+        text-decoration: none;
+        outline: 0 none;
+        background-color: @brand-primary;
+        font-weight: 300;
+        line-height: 1.7;
+        white-space: nowrap;
+        font-size: 14px;
+        min-height: 30px;
+    }
+}
+
+.input-group > .ui-select-bootstrap.dropdown {
+    /* Instead of relative */
+    position: static;
+    background-color: #e0dede;
+    border-color: #e0dede;
+}
+
+.text-muted {
+    color: #777;
+    font-weight: 300;
+}
+
+.ui-select-bootstrap .ui-select-toggle > .caret {
+    color: @brand-primary;
+    font-size: 28px;
+    border: 0;
+    height: auto;
+    top: 4px;
+    //top: 7px;
+    right: 28px;
+    margin-top: 0;
+    padding-left: 5px;
+}
+
+
+/*EN SearchBar*/
+.mainSearchBar {
+    .ui-select-container {
+        > .ui-select-match {
+
+            > .btn-default {
+                background: @la-brand;
+                color: #FFF;
+                border-radius: 0;
+                border: 0 solid #FFF;
+                font-weight: 400;
+                font-size: 14px;
+                height: 36px;
+            }
+
+            > .form-control:focus {
+                box-shadow: none;
+                border-color: @control-body;
+            }
+
+            &.btn-default-focus {
+                color: @brand-primary;
+                background-color: @la-brand;
+                border-color: #FFF;
+            }
+
+            .ui-select-match-text {
+                line-height: 1.75em;
+                text-align: right;
+                float: right !important;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .input-group > .ui-select-bootstrap.dropdown {
+        position: static;
+        background-color: @la-brand;
+        border-color: #e0dede;
+    }
+
+    .ui-select-bootstrap {
+
+        .form-control {
+            height: 30px;
+        }
+
+        > input {
+
+            &.ui-select-search {
+                &.form-control {
+                    background-color: @la-brand;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        > .ui-select-choices {
+            border-radius: 0;
+        }
+
+        .ui-select-choices-row.active > a {
+            color: #FFF;
+            text-decoration: none;
+            outline: 0 none;
+            background-color: @brand-primary;
+            font-weight: 300;
+            line-height: 1.45;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+    }
+
+    .ui-select-bootstrap .ui-select-toggle > .caret {
+        color: #FFF;
+        top: 4px;
+    }
+}
+
+
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    .col-small-padding {
+        padding: 0 0 0 3px;
+    }
+}

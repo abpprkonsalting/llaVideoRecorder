@@ -1,0 +1,490 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+.calendar-wrapper {
+
+    .mu {
+        border-bottom: 1px solid #dcdcdc;
+        font-size: 12px;
+        line-height: 19px;
+        position: relative;
+        padding: 10px 0 10px 0;
+
+        &.no-border {
+            border-bottom: 0px;
+        }
+
+        &:before {
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+            display: table;
+        }
+
+        > a {
+            color: #666;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .mu-m-link {
+            min-height: 75px;
+        }
+    }
+    //Use as Header in Stadium
+    &.as-stadium-header {
+        width: @soccer-stadium-large-desktop-width;
+
+        .mu {
+            border-bottom: 0 solid #dcdcdc;
+
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+}
+
+.calendar-wrapper .mu .mu-m {
+    position: relative;
+
+    &:before {
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .t {
+        top: 10px;
+        width: 35%;
+        height: 60px;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+
+        .t-i {
+            text-align: center;
+            position: absolute;
+
+            &.wall {
+                position: relative;
+            }
+
+
+            .t-i-wrap {
+                height: 60px;
+                display: table-cell;
+                vertical-align: middle;
+
+                &.wall {
+                    display: initial;
+                }
+            }
+
+            .i-4-flag {
+                height: 36px;
+                width: 32px;
+            }
+        }
+
+        .t-n {
+            position: absolute;
+
+            &.wall {
+                position: relative;
+                margin: auto;
+            }
+
+            .t-nTri {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .t-nText {
+                display: table-cell;
+                vertical-align: middle;
+                font-size: 18px;
+                height: 60px;
+                line-height: 27px;
+                color: @brand-primary;
+                text-transform: uppercase;
+                text-align: center;
+
+
+
+                &.wall {
+                    height: auto;
+                    padding-top: 5px;
+                    line-height: 20px;
+                    width: 100%;
+                }
+            }
+        }
+
+        &.home {
+            left: 0;
+
+            .t-i {
+                left: 0;
+            }
+
+            .t-n {
+                margin-left: 43px;
+
+                &.wall {
+                    margin: auto;
+                }
+            }
+        }
+
+        &.away {
+            right: 0;
+
+            .t-i {
+                right: 0;
+            }
+
+            .t-n {
+                right: 0;
+                margin-right: 43px;
+
+                &.wall {
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .s {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+
+        .s-status {
+            font-size: 12px;
+            min-height: 20px;
+
+
+            > .element-stadium {
+                color: @la-brand;
+                font-weight: bold;
+            }
+        }
+
+        .s-score {
+
+            .s-scoreText {
+                padding: 5px 0 5px 0;
+                display: inline-block;
+                width: 80px;
+                height: 38px;
+                text-align: center;
+                color: #FFF;
+                background-color: @la-brand;
+                font-size: 29px;
+                line-height: 29px;
+                font-family: "Tienne";
+                font-weight: bold;
+            }
+        }
+    }
+
+    .mu-reasonreferee {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        padding-top: 3px;
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:after {
+            display: table;
+            clear: both;
+            content: " ";
+        }
+
+        &:before {
+            content: " ";
+            display: table;
+        }
+
+        > .referee {
+            font-weight: bold;
+            color: @la-brand;
+        }
+    }
+
+    .mu-reasondate {
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+
+        &:after {
+            display: table;
+            clear: both;
+            content: " ";
+        }
+
+        &:before {
+            content: " ";
+            display: table;
+        }
+    }
+}
+
+.calendar-wrapper.as-stadium-header .mu .mu-m {
+    .s {
+        .s-score {
+            color: @brand-primary;
+            font-size: 36px;
+            line-height: 26px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                      */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-xsmall-width;
+
+        .mu {
+            border-bottom: 0 solid #dcdcdc;
+
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+
+    .calendar-wrapper .mu .mu-m {
+        .t {
+            top: 20px;
+            width: 35%;
+            height: 50px;
+            position: absolute;
+            z-index: 1;
+
+            .t-i {
+                .t-i-wrap {
+                    height: 50px;
+                }
+
+                .i-4-flag {
+                    height: 26px;
+                    width: 22px;
+                }
+            }
+
+            .t-n {
+                .t-nText {
+                    font-size: 12px;
+                    height: 50px;
+                    line-height: 17px;
+                }
+            }
+
+            &.home {
+                .t-n {
+                    margin-left: 33px;
+                }
+            }
+
+            &.away {
+                .t-n {
+                    margin-right: 33px;
+                }
+            }
+        }
+
+        .s {
+            .s-status {
+                font-size: 10px;
+                line-height: 26px;
+                min-height: 26px;
+            }
+
+            .s-score {
+                font-size: 27px;
+                line-height: 26px;
+            }
+
+            .s-scoreText {
+                font-size: 27px;
+                line-height: 20px;
+            }
+        }
+
+        .mu-reasonreferee {
+            font-size: 11px;
+            line-height: 10px;
+            text-align: center;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                      */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-small-width;
+
+        .mu {
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+
+    .calendar-wrapper .mu .mu-m {
+        .t {
+            top: 20px;
+            width: 35%;
+            height: 50px;
+            position: absolute;
+            z-index: 1;
+
+            .t-i {
+                .t-i-wrap {
+                    height: 50px;
+                }
+
+                .i-4-flag {
+                    height: 26px;
+                    width: 22px;
+                }
+            }
+
+            .t-n {
+                .t-nText {
+                    font-size: 12px;
+                    height: 50px;
+                    line-height: 17px;
+                }
+            }
+
+            &.home {
+                .t-n {
+                    margin-left: 33px;
+                }
+            }
+
+            &.away {
+                .t-n {
+                    margin-right: 33px;
+                }
+            }
+        }
+
+        .s {
+            .s-status {
+                font-size: 10px;
+                line-height: 26px;
+                min-height: 26px;
+            }
+
+            .s-score {
+                font-size: 27px;
+                line-height: 26px;
+            }
+
+            .s-scoreText {
+                font-size: 27px;
+                line-height: 20px;
+            }
+        }
+
+        .mu-reasonreferee {
+            font-size: 11px;
+            line-height: 10px;
+            text-align: center;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+/******************************************************/
+/*               Phone XSmall Inverse 
+                   480px - 619px                     */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-xsmall-inverse-width;
+
+        .mu {
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+}
+
+/******************************************************/
+/*               Phone Small Inverse 
+                   620px - 767px                      */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-small-inverse-width;
+
+        .mu {
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+}
+
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-tablet-width;
+
+        .mu {
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+}
+
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .calendar-wrapper.as-stadium-header {
+        width: @soccer-stadium-desktop-width;
+
+        .mu {
+            .mu-m-link {
+                min-height: 70px;
+            }
+        }
+    }
+}

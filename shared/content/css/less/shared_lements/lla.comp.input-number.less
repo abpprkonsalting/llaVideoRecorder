@@ -1,0 +1,38 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+.input-number-container {
+    min-width: 50px;
+    font-size: 0;
+    display: inline-block;
+    margin: 0 0 0 15px;
+    vertical-align: top;
+
+    > .input-number-value {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        padding: 0 5px 0 1px;
+        text-align: right;
+        width: 60px;
+        //border: 1px solid @brand-primary;
+        color: @brand-primary;
+        height: 25px;
+        border: none;
+    }
+
+    > .input-number-inc, .input-number-dec {
+        display: none;
+        background-color: @brand-primary;
+        color: #FFF;
+        font-size: 12px;
+        border: none;
+        height: 24px;
+        padding: 0 6px 0 6px;
+
+        &:hover {
+            color: @la-brand;
+            padding: 0 6px 0 6px;
+        }
+    }
+}

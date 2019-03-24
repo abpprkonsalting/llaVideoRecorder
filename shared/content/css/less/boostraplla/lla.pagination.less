@@ -1,0 +1,62 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: @line-height-computed 0;
+    border-radius: 0;
+    margin-top: 5px;
+
+    > li {
+        display: inline; // Remove list-style and block-level defaults
+        > a,
+        > span {
+            position: relative;
+            float: left; // Collapse white-space
+            padding: @padding-base-vertical @padding-base-horizontal;
+            line-height: @line-height-base;
+            text-decoration: none;
+            color: #fa804f;
+            /*background-color: @pagination-bg;*/
+            border: 1px solid @pagination-border;
+            margin-left: 3px;
+            font-size: 17px;
+            padding: 3px 9px;
+            font-weight: 400;
+        }
+
+        > span.number-of-pages {
+            /*background-color: @body-bg-color;*/
+            color: @brand-primary;
+            border: 0 solid @body-bg-color;
+            font-weight: bold;
+            padding: 6px 2px 6px 2px;
+        }
+
+        &:first-child {
+            > a,
+            > span {
+                margin-left: 0;
+                border-radius: 0;
+            }
+        }
+
+        &:last-child {
+            > a,
+            > span {
+                border-radius: 0;
+            }
+        }
+
+        &.page-arrows {
+
+            > a {
+                font-size: 1.225em;
+                font-weight: bold;
+                line-height: 0;
+            }
+        }
+    }
+}

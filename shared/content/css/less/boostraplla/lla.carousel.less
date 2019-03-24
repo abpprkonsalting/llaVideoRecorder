@@ -1,0 +1,128 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+
+.carousel-info-content {
+    .carousel-control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 15%;
+        .opacity(1);
+        font-size: @carousel-control-font-size;
+        color: @carousel-control-color;
+        text-align: center;
+        text-shadow: @carousel-text-shadow;
+        // We can't have this transition here because WebKit cancels the carousel
+        // animation if you trip this while in the middle of another animation.
+        // Set gradients for backgrounds
+        &.left {
+            background-image: none;
+            background-repeat: no-repeat;
+        }
+
+        &.right {
+            left: auto;
+            right: 0;
+            background-image: none;
+            background-repeat: no-repeat;
+        }
+        // Hover/focus state
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: 0;
+            color: @carousel-control-color;
+            text-decoration: none;
+            .opacity(1);
+        }
+        // Toggles
+        .icon-prev,
+        .icon-next,
+        .carousel-control-left,
+        .carousel-control-right {
+            position: absolute;
+            top: 40%;
+            margin-top: -10px;
+            z-index: 5;
+            display: inline-block;
+        }
+
+        .icon-prev,
+        .carousel-control-left {
+            left: 50%;
+            margin-left: -10px;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-image: url('/shared/content/img/carrousel_left.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .icon-next,
+        .carousel-control-right {
+            right: 50%;
+            margin-right: -10px;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background-image: url('/shared/content/img/carrousel_right.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .icon-prev,
+        .icon-next {
+            width: 20px;
+            height: 20px;
+            line-height: 1;
+            font-family: serif;
+        }
+
+
+        .icon-prev {
+            &:before {
+                content: '\2039'; // SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
+            }
+        }
+
+        .icon-next {
+            &:before {
+                content: '\203a'; // SINGLE RIGHT-POINTING ANGLE QUOTATION MARK (U+203A)
+            }
+        }
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 17px;
+        left: 50%;
+        z-index: 15;
+        width: 60%;
+        margin-left: -30%;
+        padding-left: 0;
+        list-style: none;
+        text-align: center;
+
+        li {
+            color: @brand-primary;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            margin: 1px;
+            text-indent: -999px;
+            border-radius: 7px;
+            cursor: pointer;
+            background: #CCC;
+
+            &.active {
+                width: 7px;
+                height: 7px;
+                background-color: @brand-primary;
+            }
+        }
+    }
+}

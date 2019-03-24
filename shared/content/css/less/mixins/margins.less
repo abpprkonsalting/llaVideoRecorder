@@ -1,0 +1,45 @@
+﻿@iterations: 60;
+
+.loop-marginTop (@index) when (@index > 0) {
+
+    .marginTop-@{index} {
+        margin-top: @index * 1px;
+    }
+
+    .loop-marginTop(@index - 5);
+}
+
+//Bottom Margins
+.loop-marginBottom (@index) when (@index > 0) {
+
+    .marginBottom-@{index} {
+        margin-bottom: @index * 1px;
+    }
+
+    .loop-marginBottom(@index - 5);
+}
+
+//Left Margins
+.loop-marginLeft (@index) when (@index > 0) {
+
+    .marginLeft-@{index} {
+        margin-left: @index * 1px;
+    }
+
+    .loop-marginLeft(@index - 5);
+}
+
+//Left Margins
+.loop-marginRight (@index) when (@index > 0) {
+
+    .marginRight-@{index} {
+        margin-right: @index * 1px;
+    }
+
+    .loop-marginRight(@index - 5);
+}
+
+.loop-marginTop (@iterations);
+.loop-marginBottom (@iterations);
+.loop-marginLeft (@iterations);
+.loop-marginRight (@iterations);

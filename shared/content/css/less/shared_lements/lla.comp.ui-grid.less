@@ -1,0 +1,423 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+.ui-grid-top-panel {
+    background: @brand-primary;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.ui-grid-header {
+    color: #FFF;
+    font-size: 12px;
+}
+
+.ui-grid-no-row-overlay {
+    font-size: 1em;
+}
+
+.ui-grid-header-cell {
+    border-right: 0 solid #D4D4D4;
+    padding: 5px 0 5px 3px;
+}
+
+.ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
+    background-color: #f0f0ee;
+    border: none;
+}
+
+.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+    box-sizing: border-box;
+    border-right: none;
+}
+
+.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:last-child {
+    box-sizing: border-box;
+    border-right: none;
+}
+
+.ui-grid-selection-row-header-buttons {
+    cursor: pointer;
+    opacity: 0.1;
+    padding: 0;
+}
+
+[class^="ui-grid-icon"]::before, [class*=" ui-grid-icon"]::before {
+}
+
+.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+    background-color: #c9dde1;
+}
+
+.ui-grid-canvas {
+    position: relative;
+    padding-top: 1px;
+
+    .ui-grid-row:nth-child(odd) .ui-grid-cell {
+        background-color: #fdfdfd;
+    }
+
+    .ui-grid-row:nth-child(even) .ui-grid-cell {
+        background-color: #f3f3f3;
+    }
+}
+
+
+
+.lla-regular-grid {
+    border: 0 solid #D4D4D4;
+    position: relative;
+    z-index: 1;
+
+    .ui-grid-cell {
+        //font-family:  Arial,"Helvetica Neue", Helvetica, sans-serif;
+        border-right: 0 solid #D4D4D4;
+        color: @brand-primary;
+        font-size: 14px;
+        line-height: 0.7;
+        padding: 10px 0 8px 3px;
+
+        &.ui-grid-row-header-cell {
+            border-right: 0;
+            padding: 8px 0 8px 0;
+            //border: 0 solid #d4d4d4;
+        }
+
+        > * {
+            vertical-align: middle;
+        }
+
+        > .table-action-wrapper {
+            text-align: right;
+            padding-right: 15px;
+
+            > .table-action {
+                color: @brand-primary;
+                font-size: 16px;
+                display: inline-block;
+                margin-right: 10px;
+
+                &:hover,
+                &:focus {
+                    color: @la-brand;
+                    outline: 0;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        > a {
+            color: @brand-primary;
+            font-size: 14px;
+            padding: 5px;
+            box-sizing: border-box;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            height: 100%;
+            display: block;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: @la-brand;
+                outline: 0;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+//Pagination
+
+.ui-grid-pager-panel {
+    background-color: #EFECD9;
+}
+
+.ui-grid-pager-container {
+    color: @brand-primary;
+    padding: 3px 0 3px 0;
+    float: none;
+    display: inline-block;
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+.ui-grid-pager-control {
+    min-width: 80px;
+    float: none;
+    display: inline-block;
+    margin: 0 15px 0 15px;
+}
+
+.input-number-dec-controls, .input-number-inc-controls {
+    display: inline-block;
+    width: 40px;
+}
+
+.input-number-dec-controls {
+    margin: 0 20px 0 0;
+}
+
+.ui-grid-button-first, .ui-grid-button-prev,
+.ui-grid-button-last, .ui-grid-button-next {
+    font-size: 20px;
+    line-height: 0;
+    display: inline-block;
+}
+
+@control-body-grid: rgba(255, 255, 255, 0.7);
+
+.ui-grid-pager-row-count-picker {
+    margin: 0 0 0 15px;
+    height: 25px;
+
+    .ui-select-container {
+        display: inline-block;
+        width: 100px;
+
+
+        > .ui-select-match {
+
+            > .btn {
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 1.45;
+                border-radius: 0;
+                transition: none;
+                font-weight: 300;
+                height: 25px;
+                overflow: hidden;
+                padding: 2px 12px;
+                text-align: right;
+            }
+
+            > .btn-default {
+                background: @control-body-grid;
+                color: @brand-primary;
+                border-radius: 0;
+                border-color: @control-body-grid;
+                border: 1px solid @control-body-grid;
+                box-shadow: none;
+            }
+
+            > .form-control:focus {
+                box-shadow: none;
+                border-color: @control-body-grid;
+            }
+
+            &.btn-default-focus {
+                color: @brand-primary;
+                background-color: @control-body-grid;
+                border-color: @control-body-grid;
+                text-decoration: none;
+                outline: 5px auto -webkit-focus-ring-color;
+                outline-offset: -2px;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .ui-select-bootstrap {
+        > input {
+
+            &.ui-select-search {
+                padding: 2px 12px;
+
+                &.form-control {
+                    border-radius: 0; /* FIXME hardcoded value :-/ */
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    background-color: #e0dede;
+                    border-color: #e0dede;
+                    transition: none;
+                    box-shadow: none;
+                    height: 25px;
+
+                    &:focus {
+                        box-shadow: none;
+                        border-color: #e0dede;
+                    }
+                }
+            }
+        }
+
+        > .ui-select-choices {
+            border-radius: 0;
+        }
+
+        .ui-select-choices-row.active > a {
+            color: #FFF;
+            text-decoration: none;
+            outline: 0 none;
+            background-color: @brand-primary;
+            font-weight: 300;
+            line-height: 1.7;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+    }
+
+    .input-group > .ui-select-bootstrap.dropdown {
+        /* Instead of relative */
+        position: static;
+        background-color: #e0dede;
+        border-color: #e0dede;
+    }
+
+    .text-muted {
+        color: #777;
+        font-weight: 300;
+    }
+
+    .ui-select-bootstrap .ui-select-toggle > .caret {
+        color: @brand-primary;
+        font-size: 20px;
+        border: 0;
+        height: auto;
+        top: 2px;
+        //top: 7px;
+        right: 28px;
+        margin-top: 0;
+        padding-left: 5px;
+    }
+}
+
+.ui-grid-pager-control button {
+    border: none;
+    background-color: transparent;
+    min-width: 16px;
+    padding: 0;
+}
+
+.ui-grid-pager-max-pages-number {
+    display: inline-block;
+    margin: 0 8px 0 3px;
+}
+
+.ui-grid-pager-row-count-label {
+    font-size: 12px;
+}
+
+.ui-grid-pager-count {
+    color: @brand-primary;
+    font-size: 12px;
+}
+
+.ui-grid-pager-count-container {
+    margin-top: 7px;
+}
+
+//Action Buttons
+.top-grid-actions {
+    margin-bottom: 5px;
+}
+
+.bottom-grid-actions {
+    margin-top: 5px;
+}
+
+/*************************************************************************************/
+/*                             RESPONSIVE CSS                                        */
+/*************************************************************************************/
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    .ui-grid-pager-control {
+        min-width: 80px;
+        float: none;
+        display: block;
+        margin: 0 15px 5px 15px;
+    }
+
+    .ui-grid-pager-count-container {
+        padding-left: 5px;
+        float: left;
+    }
+
+    .top-grid-actions {
+        > .action-button-wrapper {
+            a {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .bottom-grid-actions {
+        > .action-button-wrapper {
+            a {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                       */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+    .ui-grid-pager-control {
+        min-width: 80px;
+        float: none;
+        display: block;
+        margin: 0 15px 5px 15px;
+    }
+
+    .ui-grid-pager-count-container {
+        padding-left: 5px;
+        float: left;
+    }
+
+    .top-grid-actions {
+        > .action-button-wrapper {
+            a {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .bottom-grid-actions {
+        > .action-button-wrapper {
+            a {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                Phone XSmall Inverse 
+                   480px - 619px             */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+}
+/******************************************************/
+/*              Phone Small Inverse 
+                   620px - 767px                          */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+}
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+}
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+}
+/******************************************************/
+/*                Large Desktop 
+                   1200px - oo                     */
+/******************************************************/
+@media (min-width: @screen-lg-min) {
+}

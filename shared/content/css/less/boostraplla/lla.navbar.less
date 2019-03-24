@@ -1,0 +1,199 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+
+@navbar-height: 70px;
+
+.navbar {
+    font-weight: 400;
+    .transition(background-color 700ms);
+}
+
+.navbar-nav > li > a,
+.navbar-brand {
+    .transition(color 300ms);
+}
+
+.navbar-brand {
+    padding-bottom: 10px;
+    padding-top: 15px;
+
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+}
+
+/*
+ * Navbar :: Default
+ */
+
+@navbar-default-color: darken(#FFF, 40%);
+@navbar-default-bg: #FFF;
+@navbar-default-border: transparent;
+@navbar-default-link-color: @navbar-default-color;
+@navbar-default-link-hover-color: #000;
+@navbar-default-link-active-color: #000;
+@navbar-default-link-active-bg: transparent;
+@navbar-default-link-disabled-color: darken(#FFF, 20%);
+@navbar-default-brand-color: @navbar-default-color;
+@navbar-default-brand-hover-color: #000;
+
+.navbar-default.navbar-faded {
+    background-color: fade(#FFF,90%);
+}
+
+.navbar-default {
+    border: 0;
+
+    .navbar-toggle {
+        border-color: #DDD;
+        background-color: #FFF;
+
+        &:hover, &:focus {
+            background-color: #FFF;
+
+            .icon-bar {
+                background-color: #444;
+            }
+        }
+
+        .icon-bar {
+            background-color: #666;
+        }
+    }
+
+    .navbar-collapse {
+        .box-shadow(none);
+        border: 0;
+    }
+}
+
+@media(max-width: @screen-xs-max) {
+
+    .navbar-default.navbar-faded {
+        background-color: #FFF;
+
+        .navbar-nav {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: 1px solid #DDD;
+
+            > li > a {
+                border-bottom: 1px solid #DDD;
+            }
+
+            > li:last-child > a {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+/*
+ * Navbar :: Inverse
+ */
+
+@navbar-inverse-color: #FFF;
+@navbar-inverse-bg: #38455b;
+@navbar-inverse-border: transparent;
+@navbar-inverse-link-color: @navbar-inverse-color;
+@navbar-inverse-link-hover-color: #fa804f;
+@navbar-inverse-link-active-color: #FFF;
+@navbar-inverse-link-active-bg: transparent;
+@navbar-inverse-link-disabled-color: darken(#FFF, 40%);
+@navbar-inverse-brand-color: @navbar-inverse-color;
+@navbar-inverse-brand-hover-color: #FFF;
+
+.navbar-inverse.navbar-faded {
+    background-color: fade(#000,30%);
+}
+
+.navbar-inverse {
+    border: 0;
+
+    .navbar-toggle {
+        border: none;
+        border-radius: 0;
+        background-color: #fa804f;
+
+
+        &:hover, &:focus {
+            background-color: #fa804f;
+
+            .icon-bar {
+                background-color: #38455b;
+            }
+        }
+
+        .icon-bar {
+            background-color: #FFF;
+        }
+    }
+
+    .navbar-collapse {
+        .box-shadow(none);
+        border: 0;
+        /*display: flex !important;
+        justify-content: center;*/
+    }
+}
+
+@media(max-width: @screen-xs-max) {
+
+    .navbar {
+        min-height: 80px;
+        margin-bottom: 30px;
+    }
+
+    .navbar-inverse.navbar-faded {
+        background-color: #151515;
+
+        .navbar-nav {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: 1px solid #000;
+
+            > li > a {
+                border-top: 1px solid #252525;
+                border-bottom: 1px solid #000;
+            }
+
+            > li:last-child > a {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+/*
+ * Navbar :: Transparent
+ */
+
+@media(min-width: @screen-sm-min) {
+    .navbar {
+        min-height: 80px;
+        margin-bottom: 30px;
+    }
+
+    .navbar-collapse{
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .navbar-transparent {
+        background-color: rgba(0,0,0,0) !important;
+
+        .navbar-brand,
+        .navbar-text,
+        .navbar-nav > li > a,
+        .navbar-nav > .active > a,
+        .navbar-nav > .disabled > a {
+            color: #FFF;
+
+            &:hover, &:focus {
+                color: #FFF;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+.applied-filter-container {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+
+    > li {
+        margin: 0;
+        padding: 0;
+
+        .applied-filter {
+            font-family: Arial;
+            font-weight: 300;
+            font-size: 10px;
+            color: @brand-primary;
+            background: rgba(239, 236, 217, 0.8);
+            padding: 2px 5px 2px 5px;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+
+            > .applied-filter-close {
+                padding-top: 5px;
+                font-size: 14px;
+                margin-left: 5px;
+
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

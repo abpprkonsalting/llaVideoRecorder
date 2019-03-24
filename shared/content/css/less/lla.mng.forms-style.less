@@ -1,0 +1,366 @@
+﻿@import "bootstrap/variables.less";
+@import "lla.variables.less";
+
+.la-form-label {
+    font-size: 14px;
+    font-weight: 300;
+    color: @brand-primary;
+}
+
+.col-half-padding {
+    padding: 0 5px 0 5px;
+}
+
+.col-half-padding-first {
+    padding: 0 5px 0 10px;
+}
+
+.col-half-padding-last {
+    padding: 0 10px 0 5px;
+}
+
+
+.upload-file-container {
+
+    .upload-file {
+        position: relative;
+        right: 0;
+        margin-left: auto;
+        height: 170px;
+        /*width: 170px;*/
+        background-color: @body-bg-color;
+        /*padding: 40px 0 0 5px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.is-big-image {
+            height: 170px;
+            /*width: 250px;*/
+
+            > .upload-image {
+                height: 164px;
+                /*width: 244px;*/
+            }
+        }
+
+        &:hover, &focus {
+            cursor: pointer;
+        }
+
+        &.remove-padding {
+            padding: 3px 3px 3px 3px;
+        }
+
+        > div > .upload-icon {
+            display: table;
+            margin: 0 auto 0 auto;
+            padding-left: 5px;
+            width: 57px;
+            height: 65px;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(/shared/content/img/upload-file-photo.png);
+        }
+
+        > div > .upload-text {
+            color: @brand-primary;
+            display: table;
+            margin: 0 auto;
+            line-height: 45px;
+        }
+
+        > .upload-image {
+            height: 164px;
+            /*width: 164px;*/
+        }
+    }
+}
+
+.upload-file-container-add {
+
+    .upload-file {
+        position: relative;
+        right: 0;
+        margin-left: auto;
+        height: 170px;
+        width: 170px;
+        background-color: @body-bg-color;
+        /*padding: 40px 0 0 5px;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.is-big-image {
+            height: 170px;
+            width: 250px;
+
+            > .upload-image {
+                height: 164px;
+                width: 244px;
+            }
+        }
+
+        &:hover, &focus {
+            cursor: pointer;
+        }
+
+        &.remove-padding {
+            padding: 3px 3px 3px 3px;
+        }
+
+        > div > .upload-icon {
+            display: table;
+            margin: 0 auto 0 auto;
+            padding-left: 5px;
+            width: 57px;
+            height: 65px;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(/shared/content/img/upload-file-photo.png);
+        }
+
+        > div > .upload-text {
+            color: @brand-primary;
+            display: table;
+            margin: 0 auto;
+            line-height: 45px;
+        }
+
+        > .upload-image {
+            height: 164px;
+            width: 164px;
+        }
+    }
+}
+
+.upload-file-controls {
+    right: 0;
+    margin-left: auto;
+    width: 244px;
+    padding-left: 5px;
+
+    > .edit-action {
+        background-image: url(/shared/content/img/icon_edit.png);
+    }
+
+    > .delete-action {
+        background-image: url(/shared/content/img/icon_close.png);
+    }
+
+    > .edit-action, .delete-action {
+        color: @brand-primary;
+        font-size: 16px;
+        display: inline-block;
+        margin: 5px 3px 0 0;
+        width: 21px;
+        height: 21px;
+
+        &:hover,
+        &:focus {
+            color: @la-brand;
+            outline: 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+//Form Validation
+input.ng-touched.ng-invalid, ui-select.ng-touched.ng-invalid {
+    border: 1px @la-brand solid;
+}
+
+.ng-move {
+    -webkit-animation: pulse 0.5s;
+    -moz-animation: pulse 0.5s;
+    -o-animation: pulse 0.5s;
+    animation: pulse 0.5s;
+}
+
+.ng-enter {
+    -webkit-animation: zoomIn 0.5s;
+    -moz-animation: zoomIn 0.5s;
+    -o-animation: zoomIn 0.5s;
+    animation: zoomIn 0.5s;
+}
+
+.ng-hide-add {
+    -webkit-animation: fadeOut 0.9s;
+    -moz-animation: fadeOut 0.9s;
+    -o-animation: fadeOut 0.9s;
+    animation: fadeOut 0.9s;
+    display: block !important;
+}
+
+.ng-hide-remove {
+    -webkit-animation: fadeIn 0.9s;
+    -moz-animation: fadeIn 0.9s;
+    -o-animation: fadeIn 0.9s;
+    animation: fadeIn 0.9s;
+    display: block !important;
+}
+
+.help-block {
+    font-family: Arial;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #ff0000;
+    display: none;
+    min-height: 20px;
+    width: 100%;
+}
+
+.has-error {
+    position: relative;
+
+    > .field-required-mark {
+        display: block;
+    }
+
+    input.ng-touched.ng-invalid + div.help-block {
+        display: block;
+    }
+
+    div.ng-touched.ng-invalid + div.help-block {
+        display: block;
+    }
+}
+
+.la-select-form-control {
+    .ui-select-container.ng-touched.ng-invalid {
+        @select-bg-color: @la-brand;
+
+        > .ui-select-match {
+
+            > .btn-default {
+                border-color: @select-bg-color;
+                border: 1px solid @select-bg-color;
+            }
+        }
+    }
+}
+
+.field-required-mark {
+    height: 5px;
+    width: 5px;
+    display: none;
+    background-color: @la-brand;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.messure-indicator {
+    height: 36px;
+    width: 36px;
+    background-color: @la-brand;
+    color: #fff;
+    font-size: 14px;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+.require-hint {
+    font-size: 11px;
+    color: @brand-primary;
+    float: right;
+
+    > i {
+        font-size: 6px;
+        color: @la-brand;
+        padding-right: 3px;
+    }
+}
+
+/*************************************************************************************/
+/*                             RESPONSIVE CSS                                        */
+/*************************************************************************************/
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    .upload-file-container {
+        margin-bottom: 20px;
+
+        .upload-file {
+            margin-left: 5px;
+        }
+    }
+
+    .upload-file-controls {
+        margin-left: 5px;
+    }
+
+    .col-half-padding-first, .col-half-padding-last, .col-half-padding {
+        padding: 0 10px 0 10px;
+    }
+}
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                       */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+    .upload-file-container {
+        margin-bottom: 20px;
+
+        .upload-file {
+            margin-left: 5px;
+        }
+    }
+
+    .upload-file-controls {
+        margin-left: 5px;
+    }
+
+    .col-half-padding-first, .col-half-padding-last, .col-half-padding {
+        padding: 0 10px 0 10px;
+    }
+}
+/******************************************************/
+/*                Phone XSmall Inverse 
+                   480px - 619px             */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+}
+/******************************************************/
+/*              Phone Small Inverse 
+                   620px - 767px                          */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+    .la-form-label {
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+}
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+}
+
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+}
+/******************************************************/
+/*                Large Desktop 
+                   1200px - oo                     */
+/******************************************************/
+@media (min-width: @screen-lg-min) {
+}

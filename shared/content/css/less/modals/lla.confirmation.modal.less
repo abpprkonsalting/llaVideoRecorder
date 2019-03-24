@@ -1,0 +1,78 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+div.m-modals {
+
+    .modal-container {
+        background-color: @body-bg-color;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        position: fixed;
+        left: 50%;
+        margin-left: -200px;
+        top: 150px;
+        width: 410px;
+        height: auto;
+        display: block;
+        z-index: 20;
+        overflow: visible;
+
+        > .modal-header {
+            padding: 5px 0 0 30px;
+            margin-top: 20px;
+            height: 36px;
+            background-color: @la-brand;
+
+            > span {
+                color: #FFF;
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: "Roboto";
+            }
+        }
+
+        > .modal-data {
+            padding: 0 20px 20px 30px;
+
+            > .confirmation-message {
+
+                > p {
+                    display: block;
+                    margin-top: 20px;
+                    font-size: 16px;
+                    color: @brand-primary;
+                }
+            }
+
+            > .modal-button {
+
+                > .modal-ok, .modal-cancel {
+                    height: 38px;
+                    min-width: 100px;
+                    font-size: 14px;
+                    text-decoration: none;
+                    display: inline-block;
+                    text-align: center;
+                    padding-top: 8px;
+                    margin: 30px 0 20px 0;
+                    color: #FFF;
+
+                    &:hover, &:focus {
+                        cursor: pointer;
+                    }
+                }
+
+                > .modal-ok {
+                    background-color: @brand-primary;
+                    margin-right: 10px;
+                }
+
+                > .modal-cancel {
+                    color: #000000;
+                    background-color: @la-brand;
+                }
+            }
+        }
+    }
+}

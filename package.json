@@ -1,0 +1,42 @@
+{
+  "name": "LaliguillaVideoSuite",
+  "version": "1.0.0",
+  "description": "s",
+  "authors": [
+    "Datalnet"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "scripts": {},
+  "dependencies": {
+    "bower": "^1.8.8",
+    "file-saver": "^2.0.1"
+  },
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-filter": "^3.0.0",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^1.5.0",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-print": "^1.1.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "sprity-less": "^1.0.3",
+    "stream-series": "^0.1.1",
+    "wiredep": "^3.0.0-beta",
+    "yargs": "^3.32.0"
+  }
+}

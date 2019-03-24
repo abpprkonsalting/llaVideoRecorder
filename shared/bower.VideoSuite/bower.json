@@ -1,0 +1,26 @@
+{
+  "name": "datalnetfi",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.5.3",
+    "angular-resource": "~1.5.3",
+    "angular-sanitize": "~1.5.3",
+    "angular-messages": "~1.5.3",
+    "lodash": "~4.11.1",
+    "angular-ui-router": "~0.2.15",
+    "font-awesome": "4.7.0",
+    "angular-images-resizer": "~0.9.1",
+    "angular-ui-utils": "~0.2.3",
+    "angular-ui-select": "~0.19.4",
+    "moment": "~2.14.1",
+    "angular-translate": "^2.15.1",
+    "angular-translate-loader-partial": "^2.15.1",
+    "messageformat": "^1.0.2",
+    "angular-translate-interpolation-messageformat": "^2.15.1",
+    "file-saver":"latest"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "1.x.x"
+  }
+}

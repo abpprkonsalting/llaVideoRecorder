@@ -1,0 +1,66 @@
+// Pagination
+
+.pagination-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    > li {
+        > a,
+        > span {
+            padding: @padding-vertical @padding-horizontal;
+            font-size: @font-size;
+            line-height: @line-height;
+        }
+
+        &:first-child {
+            > a,
+            > span {
+                .border-left-radius(@border-radius);
+                border: 0 !important;
+                background-color: transparent;
+                border-color: transparent;
+                font-size: 30px;
+                color: #fa804f;
+                margin-right: 15px;
+                line-height: 0;
+                margin-top: 12px;
+            }
+
+            > a:hover {
+                border: 0 !important;
+                background-color: transparent;
+                border-color: transparent;
+                font-size: 30px;
+                color: #fa804f;
+                margin-right: 15px;
+                line-height: 0;
+                margin-top: 12px;
+                cursor: pointer;
+            }
+        }
+
+        &:last-child {
+            > a,
+            > span {
+                .border-right-radius(@border-radius);
+                border: 0 !important;
+                background-color: transparent;
+                border-color: transparent;
+                font-size: 30px;
+                color: #fa804f;
+                margin-right: 15px;
+                line-height: 0;
+                margin-top: 12px;
+            }
+
+            > a:hover {
+                border: 0 !important;
+                background-color: transparent;
+                border-color: transparent;
+                font-size: 30px;
+                color: #fa804f;
+                margin-right: 15px;
+                line-height: 0;
+                margin-top: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+﻿<div class="game-selector-header">
+    <div class="row">
+        <div class="col-xs-24 col-md-8 col-sm-8">
+            <h3 class="main-mgmt-header">Select Game</h3>
+        </div>
+    </div>
+</div>
+
+<div class="managedFilterControls">
+    <div class="row controls">
+        <div class="col-xs-24 col-md-8 col-sm-8">
+            <div class="form-group">
+                <span class="label label-general">Competition:</span>
+                <ui-select ng-model="gameSelectorCtrl.competition"
+                    theme="bootstrap"
+                    ng-disabled="disabled"
+                    on-select="gameSelectorCtrl.onCompetitionChanged(gameSelectorCtrl.competition)">
+                    <ui-select-match placeholder="Select competition...">{{$select.selected.Name}}</ui-select-match>
+                    <ui-select-choices repeat="competition in gameSelectorCtrl.competitions | filter: $select.search">
+                        <div ng-bind-html="competition.Name | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="form-group">
+                <span class="label label-general">Season:</span>
+                <ui-select ng-model="gameSelectorCtrl.season"
+                           theme="bootstrap"
+                           ng-disabled="disabled"
+                           on-select="gameSelectorCtrl.onSeasonChanged(gameSelectorCtrl.season)">
+                    <ui-select-match placeholder="Select season...">{{$select.selected.Edition}}</ui-select-match>
+                    <ui-select-choices repeat="season in gameSelectorCtrl.seasons | filter: $select.search">
+                        <div ng-bind-html="season.Edition | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+
+        <div class="col-xs-24 col-md-8 col-sm-8">
+            <div class="form-group">
+                <span class="label label-general">MatchDay:</span>
+                <ui-select ng-model="gameSelectorCtrl.matchday"
+                           theme="bootstrap"
+                           ng-disabled="disabled"
+                           on-select="gameSelectorCtrl.onMatchdayChanged(gameSelectorCtrl.matchday)">
+                    <ui-select-match placeholder="Select matchday...">{{$select.selected.MatchdayNumber}}</ui-select-match>
+                    <ui-select-choices repeat="matchday in gameSelectorCtrl.matchdays | filter: $select.search">
+                        <div ng-bind-html="matchday.MatchdayNumber | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="form-group">
+                <span class="label label-general">Game:</span>
+                <ui-select ng-model="gameSelectorCtrl.game"
+                           theme="bootstrap"
+                           ng-disabled="disabled"
+                           on-select="gameSelectorCtrl.onGamechange(gameSelectorCtrl.game)">
+                    <ui-select-match placeholder="Select game...">{{$select.selected.CombinedName}}</ui-select-match>
+                    <ui-select-choices repeat="game in gameSelectorCtrl.games | filter: $select.search">
+                        <div ng-bind-html="game.CombinedName | highlight: $select.search"></div>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </div>
+    <div class="row final">
+        <div class="col-xs-24 col-md-8 col-sm-8">
+            <a class="form-cancel btn" ng-if="gameSelectorCtrl.game != null" ui-sref="video.videoRecorder({gameId: gameSelectorCtrl.game.GameId})"> 
+                <i class="fa fa-video-camera"
+                   aria-hidden="true">
+                </i>
+            <span> Video</span></a>
+        </div>
+    </div>
+</div>
+

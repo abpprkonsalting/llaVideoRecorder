@@ -1,0 +1,89 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+.lla-container {
+    min-height: 100%;
+    margin: 110px auto 0px;
+    height: 100%;
+    //Prevent responsive white space
+    box-sizing: border-box;
+}
+
+.navbar-nav.navbar-nav-stat > li > a {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    font-size: 12px;
+
+    &:hover, &:focus {
+        cursor: pointer;
+    }
+}
+
+.la-inline > div {
+    display: inline-block;
+    *display: inline;
+}
+
+
+.footer {
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.user-image {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    margin-left: 15px;
+}
+
+.user-name {
+    position: absolute;
+    font-size: 12px;
+    padding: 0 0 0 20px;
+    top: 20px;
+    margin-left: 40px;
+}
+
+.user-plan {
+    position: absolute;
+    font-size: 11px;
+    padding: 0 0 0 20px;
+    top: 35px;
+    color: @la-brand;
+    margin-left: 40px;
+}
+
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                      */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    .user-name {
+        top: 60px;
+    }
+
+    .navbar-nav.navbar-nav-stat > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                      */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+    .user-name {
+        top: 60px;
+    }
+
+    .navbar-nav.navbar-nav-stat > li > a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

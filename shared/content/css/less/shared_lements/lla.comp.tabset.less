@@ -1,0 +1,202 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+@item-height: 50px;
+@tabsetHorPadding: 50px;
+@tabrightmargin: 10px;
+
+.lla-tabset-wrapper {
+    position: relative;
+    height: @item-height;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    .lla-tabset {
+        margin: 0 0 0 0;
+        padding: 0 @tabsetHorPadding 0 @tabsetHorPadding;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        line-height: 15px;
+        top: auto;
+        bottom: 0;
+        //text-align: center;
+        //Elimina el margin extra en inline-block
+        font-size: 0;
+
+        > .lla-tab {
+            padding: 0;
+            margin-right: @tabrightmargin;
+            display: none;
+            height: @item-height;
+
+            &.shown {
+                display: inline-block;
+                *display: inline;
+            }
+            //*****Put here the selected content style****////
+            &.selected {
+            }
+            //Put here the normal content style
+
+            > * {
+                text-align: center;
+            }
+            > * > *{
+                text-align: center;
+            } 
+        }
+    }
+
+    .lla-tabset-nav-wrapper {
+        position: absolute;
+        top: 0;
+        height: 25px;
+        width: 25px;
+
+        &.right {
+            left: auto;
+            right: 0;
+        }
+
+        &.left {
+            left: 0;
+            right: auto;
+        }
+
+        > .next, .prev {
+            font-size: 26px;
+            color: #FFF;
+            padding: 0 0 0 7px;
+            display: inline-block;
+            width: 25px;
+            line-height: @item-height;
+            background-color: rgba(234, 134, 90, 0.2);
+
+            .fa {
+                line-height: @item-height;
+            }
+
+            &:hover,
+            &:focus {
+                outline: 0;
+                text-decoration: none;
+                cursor: pointer;
+                color: #FFFFFF;
+                background-color: rgba(234, 134, 90, 0.9);
+            }
+
+            &.disabled-next, .disabled-prev {
+
+                &:hover,
+                &:focus {
+                    color: @brand-primary;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*************************************************************************************/
+/*                             RESPONSIVE CSS                                        */
+/*************************************************************************************/
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    //@tabrightmargin: 5px;
+    @tabsetHorPadding: 20px;
+
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            text-align: center;
+            padding: 0 @tabsetHorPadding 0 @tabsetHorPadding;
+
+            > .lla-tab {
+                width: 115px;
+                margin-right: @tabrightmargin;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                       */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+    @tabrightmargin: 10px;
+    @tabsetHorPadding: 5px;
+
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            text-align: center;
+            padding: 0 @tabsetHorPadding 0 @tabsetHorPadding;
+
+            > .lla-tab {
+                width: 135px;
+                margin-right: @tabrightmargin;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                Phone XSmall Inverse 
+                   480px - 619px             */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+}
+/******************************************************/
+/*              Phone Small Inverse 
+                   620px - 767px                          */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+}
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    @tabrightmargin: 10px;
+    @tabsetHorPadding: 35px;
+
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            padding: 0 @tabsetHorPadding 0 @tabsetHorPadding;
+
+            > .lla-tab {
+                width: 130px;
+                margin-right: @tabrightmargin;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            > .lla-tab {
+                width: 150px;
+            }
+        }
+    }
+}
+/******************************************************/
+/*                Large Desktop 
+                   1200px - oo                     */
+/******************************************************/
+@media (min-width: @screen-lg-min) {
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            > .lla-tab {
+                width: 150px;
+            }
+        }
+    }
+}

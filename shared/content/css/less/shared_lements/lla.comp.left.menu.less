@@ -1,0 +1,99 @@
+﻿@import "../mixins/css3-usefull-mixins.less";
+@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+@menu-width: 100%;
+
+.border-box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+lla-left-menu {
+    display: block;
+
+    > .slideWindowVerContainer {
+        position: absolute;
+        z-index: 8;
+        top: 90px;
+        width: @menu-width;
+        height: 100%;
+        padding: 0 0 0 0;
+        background-color: @brand-primary;
+        .border-box;
+
+        &.left {
+            left:@menu-width*-1;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+        }
+
+        &.left.show {
+            left: 0px;
+            /*.transform(translate3d(@menu-width, 0, 0));*/
+        }
+
+        > .slideWindowVerWrapper {
+            height: auto;
+        }
+    }
+}
+
+
+/*************************************************************************************/
+/*                             RESPONSIVE CSS                                        */
+/*************************************************************************************/
+
+
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+}
+
+
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                       */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+}
+
+/******************************************************/
+/*                Phone XSmall Inverse 
+                   480px - 619px             */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+}
+
+/******************************************************/
+/*              Phone Small Inverse 
+                   620px - 767px                          */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+}
+
+
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+}
+
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+}
+
+
+/******************************************************/
+/*                Large Desktop 
+                   1200px - oo                     */
+/******************************************************/
+@media (min-width: @screen-lg-min) {
+}

@@ -1,0 +1,95 @@
+﻿<div id="wrapper" class="wrapper" ngsf-fullscreen>
+    <div class="video-wrapper">
+        
+        <div class="game-event-container" ng-if="videoRecorderCtrl.videoRecorderState == 2 && videoRecorderCtrl.sendingState == 0" style="z-index:15">
+            <a ng-click="videoRecorderCtrl.markEvent(11)"><img src="/content/image/gol_icon.png" /></a>
+            <a ng-click="videoRecorderCtrl.markEvent(22)"><img src="/content/image/roja_icon.png" /></a>
+            <a ng-click="videoRecorderCtrl.markEvent(21)"><img  src="/content/image/amarilla_icon.png" /></a>
+        </div>
+        <div class="game-event-container" ng-if="videoRecorderCtrl.videoRecorderState == 2 && videoRecorderCtrl.sendingState == 1" style="z-index:15;display: flex;width: 100%;justify-content: space-around;">
+            <a ng-click="videoRecorderCtrl.setTeam('Home')"
+               style="display: flex;flex-direction: column;align-items: center;">
+                <img ng-src="/content/image/club_default_image.png" style="max-height:150px">
+                <span>{{videoRecorderCtrl.game.HomeName}}</span>
+            </a>
+            <a ng-click="videoRecorderCtrl.setTeam('Visitor')"
+               style="display: flex;flex-direction: column;align-items: center;">
+                <img ng-src="/content/image/club_default_image.png" style="max-height:150px" />
+                <span>{{videoRecorderCtrl.game.VisitorName}}</span>
+            </a>
+        </div>
+        <div class="players-container" ng-if="videoRecorderCtrl.videoRecorderState == 2 && videoRecorderCtrl.sendingState == 2" style="z-index:15;display: flex;width: 70%;justify-content: flex-start;overflow-y: auto;height: 100%;
+            flex-direction: column;align-items: center;padding-top: 10vh;">
+            <div class="row" style="padding-bottom: 5px;">
+                <div class="col-xs-24 col-md-12">
+                    <span style="font-size: 20px;">Players:</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-24 col-md-12">
+                    <ul>
+                        <li ng-repeat="row in videoRecorderCtrl.Left"
+                            ng-click="videoRecorderCtrl.setPlayer(row)">
+                            <a style="margin-left: 10px;">
+                                <span class="data1 ng-binding">{{row.Number}}</span>
+                                <span class="data2 ng-binding">{{row.NameToShow}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-24 col-md-12">
+                    <ul>
+                        <li ng-repeat="row in videoRecorderCtrl.Right"
+                            ng-click="videoRecorderCtrl.setPlayer(row)">
+                            <a style="margin-left: 10px;">
+                                <span class="data1 ng-binding">{{row.Number}}</span>
+                                <span class="data2 ng-binding">{{row.NameToShow}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row separator">&nbsp;</div>
+
+        </div>
+
+        <lla-video-recorder id="videocapture"
+                            lla-video-state="videoRecorderCtrl.videoRecorderState"
+                            lla-video-params="{{videoRecorderCtrl.videoParams}}"
+                            lla-video-video-devices="videoRecorderCtrl.videoDevices"
+                            touch-action = "takeSnapShotThenPreviewFromCodeThenSend">
+        </lla-video-recorder>
+        
+        <div class="footer">
+            <div class="video-controllers-container">
+                <div lla-video-recorder-control="Record"
+                       lla-video-recorders="videocapture"
+                       lla-video-hide-when-inactive="true"
+                       lla-video-trigger-event="click">
+                    <i class="fa fa-circle-o"
+                       aria-hidden="true">
+                    </i>
+                    <span>Record</span>
+                </div>
+                <div lla-video-recorder-control="Stop"
+                       lla-video-recorders="videocapture"
+                       lla-video-hide-when-inactive="true"
+                       lla-video-trigger-event="click">
+                    <i class="fa fa-pause-circle-o"
+                       aria-hidden="true">
+                    </i>
+                    <span>Pause</span>
+                </div>
+            </div>
+            
+            <div class="video-controllers-container">
+                <img src="/content/image/change_camera.png"
+                   ng-if="videoRecorderCtrl.videoDevices.length > 1 && videoRecorderCtrl.videoRecorderState == 1"
+                   ng-click="videoRecorderCtrl.changeVideoDevice()"/>
+                <span style="height: 25px;">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+

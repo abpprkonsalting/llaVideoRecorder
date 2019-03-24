@@ -1,0 +1,27 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+.info-message-container {
+    display: table;
+
+
+    > .info-message-warning-icon {
+        display: table-cell;
+        background-color: #ffab00;
+        width: 50px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px 10px 10px 10px;
+    }
+
+    > .info-message-warning-text {
+        padding: 10px 10px 10px 10px;
+        display: table-cell;
+        background-color: #ffc400;
+
+        > span {
+            color: #000;
+            font-size: 12px;
+        }
+    }
+}

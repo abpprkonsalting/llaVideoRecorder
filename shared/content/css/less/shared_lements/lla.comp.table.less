@@ -1,0 +1,50 @@
+﻿//
+// Carousel
+// --------------------------------------------------
+@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+.table {
+    margin-bottom: 0;
+    color: @brand-primary;
+    font-size: 14px;
+
+    > thead {
+        > tr {
+            background-color: #f2f2f2;
+            font-size: 0.9em;
+
+            > th {
+                border-bottom: 0 solid #999;
+                vertical-align: bottom;
+                color: #FFF;
+                background-color: @brand-primary;
+                padding: 8px 12px;
+            }
+        }
+    }
+
+    tbody {
+
+        tr {
+
+            td {
+                padding: 8px 12px;
+
+                > * {
+                    vertical-align: middle;
+                }
+
+                .highlightteam {
+                    font-weight: 400;
+                }
+            }
+
+            &.even {
+                background-color: #e0dede;
+            }
+        }
+    }
+}
+

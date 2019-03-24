@@ -1,0 +1,140 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+@import "../bootstrap/mixins.less";
+
+.btn {
+    text-shadow: none !important;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none !important;
+    .transition(all 300ms);
+
+    &:hover, &:focus {
+        outline: 0;
+        .box-shadow(none);
+    }
+}
+
+/*
+ * Button :: Transparent
+ */
+
+.btn-transparent {
+    border-color: #FFF;
+    color: #FFF;
+
+    &:hover, &:focus {
+        background: rgba(255,255,255,.1);
+        color: #FFF;
+        .box-shadow(none);
+    }
+}
+
+
+.btn-white-outline {
+    display: inline-block;
+    border: 1px solid #FFF;
+    border-radius: @border-radius-base + 1px;
+    padding: 2px;
+
+    > .btn {
+        border-radius: @border-radius-base !important;
+    }
+}
+
+.btn-white {
+    position: relative;
+    border-color: #FFF;
+    background-color: #FFF;
+    color: @gray-dark;
+
+    &:hover, &:focus {
+        border-color: transparent;
+        background-color: transparent;
+        color: #FFF;
+    }
+}
+
+.btn-for-dropdown {
+    background: #e0dede;
+    color: @brand-primary;
+    border-radius: 0;
+    border-color: @control-body;
+    border: 1px solid @control-body;
+    outline: 0;
+    width: 100%;
+
+    > .btn-for-dropdown-icon {
+        float: right;
+        font-weight: bold;
+        line-height: 0;
+        font-size: 24px;
+    }
+
+    > .btn-for-dropdown-text {
+        float: left;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 23px;
+        font-family: Roboto;
+    }
+}
+
+.btn-brand {
+    height: 36px;
+    background-color: @la-brand;
+    line-height: 1.5;
+
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: rgba(56, 69, 91, .8);
+    }
+
+    &.active {
+        background-color: rgba(56, 69, 91, 1);
+    }
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+.btn-brand-negative {
+    height: 36px;
+    background-color: @brand-primary;
+    line-height: 1.5;
+
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: rgba(234, 134, 90, 1);
+    }
+
+    &.active {
+        background-color: rgba(234, 134, 90, 1);
+    }
+
+    > * {
+        vertical-align: middle;
+    }
+}
+
+.btn-brand-nosize {
+    background-color: @la-brand;
+    line-height: 1.5;
+
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background-color: rgba(56, 69, 91, .8);
+    }
+
+    &.active {
+        background-color: rgba(56, 69, 91, 1);
+    }
+
+    > * {
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,162 @@
+﻿@import "../bootstrap/variables.less";
+@import "../lla.variables.less";
+
+@item-height: 50px;
+@tabsetHorPadding: 25px;
+
+.tabActionContainerSolidBg {
+    background-color: @brand-primary;
+    width: 100%;
+    height: @item-height;
+    padding-right: 0;
+
+    &.tabActionContainerSolidBg-inline {
+        display: inline-block;
+        *display: inline;
+    }
+}
+
+.lla-tabset-wrapper {
+    .lla-tabset {
+
+        > .lla-tab {
+            //*****Put here the selected content style****////
+            &.selected {
+                //Para estilo bg solid
+                &.is-solidbg {
+                    /*> div {
+                        > a {
+                            color: @la-brand;
+                        }
+                    }*/
+                    background-color: @la-brand;
+
+                    > div {
+                        > a {
+                            &:hover,
+                            &:focus {
+                                color: @carousel-control-color;
+                            }
+                        }
+                    }
+                }
+            }
+            //Put here the normal content style
+            //Para estilo bg solid
+            &.is-solidbg {
+                > div {
+                    display: table;
+                    width: 100%;
+
+                    > a {
+                        padding: 0 10px 0 10px;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #FFF;
+                        vertical-align: middle;
+                        display: table-cell;
+                        height: @item-height;
+                        outline: 0;
+
+
+                        &:hover,
+                        &:focus {
+                            outline: 0;
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: @la-brand;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*************************************************************************************/
+/*                             RESPONSIVE CSS                                        */
+/*************************************************************************************/
+/******************************************************/
+/*                  Phone XSmall 
+                   320px - 359px                       */
+/******************************************************/
+@media (min-width: 320px) and (max-width: 359px) {
+    @tabsetHorPadding: 20px;
+
+    .tabActionContainerSolidBg {
+        background-color: @brand-primary;
+        width: 100%;
+        height: @item-height;
+        padding: 0 0 65px 0;
+    }
+
+    .lla-tabset-wrapper {
+        .lla-tabset {
+            > .lla-tab {
+                &.is-solidbg {
+                    border: 1px solid @la-brand;
+                }
+            }
+        }
+    }
+}
+/******************************************************/
+/*                  Phone Small 
+                   360px - 479px                       */
+/******************************************************/
+@media (min-width: 360px) and (max-width: 479px) {
+    .tabActionContainerSolidBg {
+        background-color: @brand-primary;
+        width: 100%;
+        height: @item-height;
+        padding: 0 0 65px 0;
+    }
+
+    .lla-tabset-wrapper {
+        .lla-tabset {
+
+
+            > .lla-tab {
+                &.is-solidbg {
+                    /*border: 1px solid @la-brand;*/
+                }
+            }
+        }
+    }
+}
+/******************************************************/
+/*                Phone XSmall Inverse 
+                   480px - 619px             */
+/******************************************************/
+@media (min-width: 480px) and (max-width: 619px) {
+}
+/******************************************************/
+/*              Phone Small Inverse 
+                   620px - 767px                          */
+/******************************************************/
+@media (min-width: 620px) and (max-width: 767px) {
+}
+/******************************************************/
+/*                    Tablet 
+                   768px - 991                        */
+/******************************************************/
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .tabActionContainerSolidBg {
+        background-color: @brand-primary;
+        width: 100%;
+        height: @item-height;
+    }
+}
+
+/******************************************************/
+/*                    Desktop 
+                   992px - 1199px                     */
+/******************************************************/
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+}
+/******************************************************/
+/*                Large Desktop 
+                   1200px - oo                     */
+/******************************************************/
+@media (min-width: @screen-lg-min) {
+}
