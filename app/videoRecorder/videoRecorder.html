@@ -2,19 +2,19 @@
     <div class="video-wrapper">
         
         <div class="game-event-container" ng-if="videoRecorderCtrl.videoRecorderState == 2 && videoRecorderCtrl.sendingState == 0" style="z-index:15">
-            <a ng-click="videoRecorderCtrl.markEvent(11)"><img src="content/image/gol_icon.png" /></a>
-            <a ng-click="videoRecorderCtrl.markEvent(22)"><img src="content/image/roja_icon.png" /></a>
-            <a ng-click="videoRecorderCtrl.markEvent(21)"><img  src="content/image/amarilla_icon.png" /></a>
+            <a ng-click="videoRecorderCtrl.markEvent(11)"><img src="gulp_build/content/image/gol_icon.png" /></a>
+            <a ng-click="videoRecorderCtrl.markEvent(22)"><img src="gulp_build/content/image/roja_icon.png" /></a>
+            <a ng-click="videoRecorderCtrl.markEvent(21)"><img  src="gulp_build/content/image/amarilla_icon.png" /></a>
         </div>
         <div class="game-event-container" ng-if="videoRecorderCtrl.videoRecorderState == 2 && videoRecorderCtrl.sendingState == 1" style="z-index:15;display: flex;width: 100%;justify-content: space-around;">
             <a ng-click="videoRecorderCtrl.setTeam('Home')"
                style="display: flex;flex-direction: column;align-items: center;">
-                <img ng-src="content/image/club_default_image.png" style="max-height:150px">
+                <img ng-src="gulp_build/content/image/club_default_image.png" style="max-height:150px">
                 <span>{{videoRecorderCtrl.game.HomeName}}</span>
             </a>
             <a ng-click="videoRecorderCtrl.setTeam('Visitor')"
                style="display: flex;flex-direction: column;align-items: center;">
-                <img ng-src="content/image/club_default_image.png" style="max-height:150px" />
+                <img ng-src="gulp_build/content/image/club_default_image.png" style="max-height:150px" />
                 <span>{{videoRecorderCtrl.game.VisitorName}}</span>
             </a>
         </div>
@@ -83,7 +83,7 @@
             </div>
             
             <div class="video-controllers-container">
-                <img src="content/image/change_camera.png"
+                <img src="gulp_build/content/image/change_camera.png"
                    ng-if="videoRecorderCtrl.videoDevices.length > 1 && videoRecorderCtrl.videoRecorderState == 1"
                    ng-click="videoRecorderCtrl.changeVideoDevice()"/>
                 <span style="height: 25px;">&nbsp;</span>
