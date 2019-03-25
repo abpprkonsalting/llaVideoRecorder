@@ -1,4 +1,4 @@
-# llaVideoRecorder
+# llaVideoRecorder || Demo at: https://abpprkonsalting.github.io/llaVideoRecorder/
 
 General description
 =======================
@@ -38,7 +38,6 @@ devices. Eventually, when there was not need for this, the functionallity was re
 The solution shown here include some basic template and code from the original project, but it was stripped to the
 minimum necessary to show the functionallity of the directive.
 
-Working showcase at https://abpprkonsalting.github.io/llaVideoRecorder/
 
 This code use other available code from github, such as:
 
