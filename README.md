@@ -3,13 +3,13 @@
 General description
 =======================
 
-This is an angularjs directive designed as part of a more general system for recording short videos related to sport events.
+This is an angularjs directive designed as part of a more general system for recording short videos related to sport events (gols, red card, yellow cards, faults, etc.)
 
-The idea is to give the user the opportunity to capture those events (gols, red card, yellow cards, faults, etc.) in real time with the minimum lost of time in the process, yet provide the possibility to choose a back "start moment" for the saving of the video.
+The idea is to give the user the opportunity to capture those events with the minimum lost of time in the process, as he/she is following the action with the phone; yet provide the possibility to choose a back "start moment" the saving of the video. As an example, the user is sat in a stadium viewing the match between teams A & B
 
-It was part of a project for implementing a social network for sports (currently active as to 2019 March).
+It was part of a project for implementing a social network for sports (currently active as of March 2019).
 
-It is used in the following way:
+The directive is used in the following way:
 
 1- The user is following the action running in the field with his device. This one is working in a state in which it
 showns the recorded video at full screen in the device, so the user could follow the action.
