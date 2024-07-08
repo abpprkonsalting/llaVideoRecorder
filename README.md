@@ -5,35 +5,52 @@ General description
 
 This is an angularjs directive designed as part of a more general system for recording short videos related to sport events (gols, red card, yellow cards, faults, etc.)
 
-The idea is to give the user the opportunity to capture those events with the minimum lost of time in the process, as he/she is following the action with the phone; yet provide the possibility to choose a back "start moment" the saving of the video. As an example, the user is sat in a stadium viewing the match between teams A & B
+The idea is to give the user the opportunity to capture those events with the minimum lost of time in the process, as he/she is following the action with the phone; yet provide the possibility to choose a back "start moment" the saving of the video.
 
-It was part of a project for implementing a social network for sports (currently active as of March 2019).
+It was part of a project for implementing a social network for sports (currently active as of July 2024).
 
 The directive is used in the following way:
 
-1- The user is following the action running in the field with his device. This one is working in a state in which it
-showns the recorded video at full screen in the device, so the user could follow the action.
+1- The user select some parameters corresponding with the game he wants to record: Competition, MatchDay, Season, Game.
 
-2- When an event happens, and the user decide to save it, he makes a touch in the screen.
+![image](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/228978f8-dec6-4905-ba57-c4c335025796)
 
-3- The app give the user some variables related with the event (team, player, etc.). These variable usually came from
-the back end and are part of the broader system for registering the events of the competition. In this stripped version for
-showcase the values used are fixed and hardcoded in the front end.
+2- The user start to follow the action running in the field with his device, pressing the button "Video". 
 
-4- When the user had selected the variables (with the minimum interaction as possible), then it's shown a portfolio of
-back start moments on three seconds intervals (this could be configured, in the intervals counts and on its durations).
-This means that the first start point is 3 seconds back from the moment the user touched the screen, the second one is
-6 seconds back, and so forth.
+![image](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/8fb97ef2-a4a9-419e-b074-77af32816aac)
+
+3- The interface for management of the recording / pausing the video is shown.
+
+![image](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/1473b496-9b85-45a9-8a99-2b4b4ba0f0b0)
+
+4- When the user press Record, the device shows the recorded video at full screen, so the user could follow the action.
+
+
+
+5- When an event happens (gol, red card, yellow card), and the user decide to save it, he makes a touch in the screen.
+
+6- The app presents options to the user so he can choose which kind of event was (gol, red card, yellow card).
+
+7- The app presents more options to the user for some variables related with the event (team, player, etc.) 
+These variable usually came from the backend and are part of the broader system for registering the events of the 
+competition. In this stripped version for showcase the values used are fixed in the frontend.
+
+
+
+8- When the user had selected the variables (with the minimum interaction as possible), then it's shown a portfolio of
+back start moments on three seconds intervals (this could be configured, on the amount of intervals and on its durations).
+This means that the first start moment is 3 seconds back from the moment the user touched the screen, the second one is
+6 seconds back, and so forth up to 24s for this example.
 
 This portfolio is made of short videos as well, so the user have the possibility to make a quick determination of the
 moment he wants to use as the start of the action to record.
 
-5- When the user select the start moment, the system inmediatelly returns to the following state, and in the background
+9- When the user select the start moment, the system inmediatelly returns to the following state, and in the background
 using a webworker, sends the captured video to the back end, where it's processed and stored related to the sport event. 
 
 This solution, implemented ussing the browser capabilities to access camera and audio devices, was a first approach
 for convincing the investors the factibility of the idea, and as such the need to expand the project to use mobile
-devices. Eventually, when there was not need for this, the functionallity was removed from the front end code.
+devices. Eventually, it was determined there was not need for this functionallity, so it was removed from the system.
 
 The solution shown here include some basic template and code from the original project, but it was stripped to the
 minimum necessary to show the functionallity of the directive.
