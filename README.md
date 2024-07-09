@@ -48,11 +48,12 @@ moment he wants to use as the start of the action to record.
 
 ![zz7](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/bddcd624-f09e-4891-9587-6719c2578fee)
 
-9- When the user select the start moment, the system inmediatelly returns to the recording state (so a new eventcould be captured),
+9- When the user select the start moment, the system inmediatelly returns to the recording state (so a new event could be captured),
 and in the background using a webworker sends the captured video to the backend, where it's processed and stored. 
 
-The images shown as examples on this readme are doctored, and it's purpose is to show how the directive works. For a demostration
-of how it works in real life, the reader is invited to use the demo on a mobile device with a camera.
+The images shown as examples on this readme are doctored and do not correspond to a real recording using this directive. It's purpose 
+is to show how the directive works. For a demostration of how it works in real life, the reader is invited to use the
+demo on a mobile device with a camera.
 
 This solution, implemented ussing the browser capabilities to access camera and audio devices, was a first approach
 for convincing the investors the factibility of the idea, and as such the need to expand the project to use mobile
