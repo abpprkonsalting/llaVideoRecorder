@@ -79,13 +79,11 @@ Thanks to all the programmers of those contributions.
 Directive description
 =======================
 
-The directive in fact is composed by three elements:
+The system is composed by three elements:
 
-1- A directive, llaVideoRecorder, which is the one that encapsulate the video elements to show the action. The full screen
-one that shows the real action been followed, as well as the small ones where the back start points for selection are shown in the showcase.
+1- A directive, llaVideoRecorder, which is the one that encapsulate the video elements to show the action.
 
-2- A directive, llaVideoRecorderControl, which is the one for controlling the video recording devices. This directive could be
-used several times in the same template, and could be use each time in one of several configurable functions: Record, Stop, Capture and ShowPreview. The whole system was designed in such a way that in the same template could be included several Control directives that can manage several Recorders at the same time. Yet that functions were never fully tested.
+2- Another directive, llaVideoRecorderControl, which is the one for controlling the video recording devices. This directive could be used several times in the same template, and each time could be in one of several configurable functions: Record, Stop, Capture and ShowPreview. The whole system was designed in such a way that in the same template could be included several Control directives that can manage several Recorders at the same time.
 
 3- A factory, llaVideoRecorder, where the real action takes place. Here the recorder objects are created and registered. The webworker functions for sending the blobs to the back end are created and instantiated here as well.
 
