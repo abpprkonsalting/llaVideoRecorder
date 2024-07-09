@@ -3,11 +3,11 @@
 General description
 =======================
 
-This is an angularjs directive designed as part of a more general system for recording short videos related to sport events (gols, red card, yellow cards, faults, etc.)
+This is an angularjs directive designed as part of a more general system for recording short videos related to sport events (in football: gols, red card, yellow cards, faults, etc.)
 
-The idea is to give the user the opportunity to capture those events with the minimum lost of time in the process, as he/she is following the action with the phone; yet provide the possibility to choose a back "start moment" the saving of the video.
+The idea is to give the user the opportunity to capture those events with the minimum lost of time in the process, as he is recording the actions in the field, following it with it's phone. 
 
-It was part of a project for implementing a social network for sports (currently active as of July 2024).
+When the event happens and the user decides to record it (touching the screen), he is given the possibility to choose a back "start moment" from which save the video. Those "start" moments are at specific intervals of time (tipically 3s), so the video could be "from" 3s, 6s, 9s, an so on backward.
 
 The directive is used in the following way:
 
@@ -23,7 +23,7 @@ The directive is used in the following way:
 
 ![image](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/1473b496-9b85-45a9-8a99-2b4b4ba0f0b0)
 
-4- When the user press Record, the device shows the recorded video at full screen, so the user could follow the action.
+4- When the user press "Record", the device shows the recorded video at full screen, so the user could follow the action.
 
 ![zz4](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/574e7cfe-67b1-4a2c-b4fd-6da249ced11b)
 
@@ -34,12 +34,12 @@ and the app presents options to the user so he can choose which kind of event wa
 
 6- The app presents more options to the user for some variables related with the event (team, player, etc.) 
 These variable usually came from the backend and are part of the broader system for registering the events of the 
-competition. In this stripped version for showcase the values used are fixed in the frontend.
+competition.
 
 ![zz6](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/0b92b8b7-1174-4e1a-b518-fcaa5cd376c4)
 
 8- When the user had selected the variables (with the minimum interaction as possible), then it's shown a portfolio of
-back start moments on three seconds intervals (this could be configured, on the amount of intervals and on its durations).
+back "start" moments on three seconds intervals (this could be configured, on the amount of intervals and on its durations).
 This means that the first start moment is 3 seconds back from the moment the user touched the screen, the second one is
 6 seconds back, and so forth up to 24s for this example.
 
@@ -48,17 +48,20 @@ moment he wants to use as the start of the action to record.
 
 ![zz7](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/bddcd624-f09e-4891-9587-6719c2578fee)
 
+9- When the user select the start moment, the system inmediatelly returns to the recording state (so a new eventcould be captured),
+and in the background using a webworker sends the captured video to the backend, where it's processed and stored. 
 
-9- When the user select the start moment, the system inmediatelly returns to the following state, and in the background
-using a webworker, sends the captured video to the backend, where it's processed and stored related to the sport event. 
+The images shown as examples on this readme are doctored, and it's purpose is to show how the directive works. For a demostration
+of how it works in real life, the reader is invited to use the demo on a mobile device with a camera.
 
 This solution, implemented ussing the browser capabilities to access camera and audio devices, was a first approach
 for convincing the investors the factibility of the idea, and as such the need to expand the project to use mobile
-devices, and as such hire new programmers with those skills. Eventually, it was determined there was not need for 
-this functionallity, so it was removed from the system.
+devices, and hire new programmers with those skills.
 
-The solution shown here include some basic template and code from the original project, but it was stripped to the
+The solution shown here includes some basic template and code from the original project, but it was stripped to the
 minimum necessary to showcase the functionallity of the directive for recording the event videos.
+
+This directive was part of a project for implementing a social network for sports currently active as of July 2024 (laliguilla.com).
 
 This code use other available code from github, such as:
 
