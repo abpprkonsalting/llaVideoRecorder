@@ -25,17 +25,18 @@ The directive is used in the following way:
 
 4- When the user press Record, the device shows the recorded video at full screen, so the user could follow the action.
 
+![zz4](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/574e7cfe-67b1-4a2c-b4fd-6da249ced11b)
 
+5- When an event happens (gol, red card, yellow card), and the user decide to save it, he makes a touch in the screen
+and the app presents options to the user so he can choose which kind of event was (gol, red card, yellow card).
 
-5- When an event happens (gol, red card, yellow card), and the user decide to save it, he makes a touch in the screen.
+![zz5](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/0260fd86-c0a3-4976-8a3f-8f2eca328dff)
 
-6- The app presents options to the user so he can choose which kind of event was (gol, red card, yellow card).
-
-7- The app presents more options to the user for some variables related with the event (team, player, etc.) 
+6- The app presents more options to the user for some variables related with the event (team, player, etc.) 
 These variable usually came from the backend and are part of the broader system for registering the events of the 
 competition. In this stripped version for showcase the values used are fixed in the frontend.
 
-
+![zz6](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/0b92b8b7-1174-4e1a-b518-fcaa5cd376c4)
 
 8- When the user had selected the variables (with the minimum interaction as possible), then it's shown a portfolio of
 back start moments on three seconds intervals (this could be configured, on the amount of intervals and on its durations).
@@ -45,16 +46,19 @@ This means that the first start moment is 3 seconds back from the moment the use
 This portfolio is made of short videos as well, so the user have the possibility to make a quick determination of the
 moment he wants to use as the start of the action to record.
 
+![zz7](https://github.com/abpprkonsalting/llaVideoRecorder/assets/32166875/bddcd624-f09e-4891-9587-6719c2578fee)
+
+
 9- When the user select the start moment, the system inmediatelly returns to the following state, and in the background
-using a webworker, sends the captured video to the back end, where it's processed and stored related to the sport event. 
+using a webworker, sends the captured video to the backend, where it's processed and stored related to the sport event. 
 
 This solution, implemented ussing the browser capabilities to access camera and audio devices, was a first approach
 for convincing the investors the factibility of the idea, and as such the need to expand the project to use mobile
-devices. Eventually, it was determined there was not need for this functionallity, so it was removed from the system.
+devices, and as such hire new programmers with those skills. Eventually, it was determined there was not need for 
+this functionallity, so it was removed from the system.
 
 The solution shown here include some basic template and code from the original project, but it was stripped to the
-minimum necessary to show the functionallity of the directive.
-
+minimum necessary to showcase the functionallity of the directive for recording the event videos.
 
 This code use other available code from github, such as:
 
